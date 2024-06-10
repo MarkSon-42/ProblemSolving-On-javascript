@@ -1,3 +1,7 @@
+// 일주일동안 100+솔을 빠르게 해서
+// js코테를 대비한다...!!
+
+
 // // function solution(s) {
 // //     let pCount = 0;
 // //     let yCount = 0;
@@ -80,24 +84,48 @@
 
 // 나는 이 코드도 좋다.
 
-function solution(n) {
-    var answer = 0;
-
-    n += '';
-    n = n.split('').sort();
-
-    while(n.length > 0) {
-        answer += n.pop();
-    }
-    return parseInt(answer);
-}
+// function solution(n) {
+//     var answer = 0;
 //
-// let num = 429;
-// console.log(num.toString(16));
-// console.log(num.toString(8));
-// console.log(num.toString(2))
+//     n += '';
+//     n = n.split('').sort();
 //
-// null처리에도 차이가 있어요.
-// console.log(String(null)); // "null"
-// console.log(null.toString()); // TypeError: Cannot read property 'toString' of null
+//     while(n.length > 0) {
+//         answer += n.pop();
+//     }
+//     return parseInt(answer);
+// }
+// //
+// // let num = 429;
+// // console.log(num.toString(16));
+// // console.log(num.toString(8));
+// // console.log(num.toString(2))
+// //
+// // null처리에도 차이가 있어요.
+// // console.log(String(null)); // "null"
+// // console.log(null.toString()); // TypeError: Cannot read property 'toString' of null
+//
+// // console.log(Math.sqrt(9)); // 3
+//
+//
+//
+// console.log(Number.isInteger(0)); // true
+// console.log(Number.isInteger(1.1)); // false
 
+// console.log(Math.pow(2, 3)); // 8
+
+
+// function solution(arr) {
+//     let sum = 0;
+//     let len = arr.length
+//     for (let i = 0; i < len; i++) {
+//         sum += arr[i];
+//     }
+//     return sum / len;
+// }
+//
+// function solution(seoul) {
+//     let index = seoul.indexOf("Kim");
+//     // "Kim"이라는 문자열을 찾기 위해 seoul 배열을 순회...  index0f()
+//     return `김서방은 ${index}에 있다`;
+// }
