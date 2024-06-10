@@ -129,3 +129,80 @@
 //     // "Kim"이라는 문자열을 찾기 위해 seoul 배열을 순회...  index0f()
 //     return `김서방은 ${index}에 있다`;
 // }
+
+// function solution(arr) {
+//     let stack = [];
+//
+//     for (let i = 0; i < arr.length; i++) {
+//         if (stack.length === 0 || stack[stack.length - 1] !== arr[i]) {
+//             stack.push(arr[i]);
+//         }
+//     }
+//     return stack;
+// }
+//
+// process.stdin.setEncoding('utf8');
+// // 이렇게 하면, 입력받은 데이터를 문자열로 처리할 수 있음.
+// process.stdin.on('data', data => {
+//     // 'data' 이벤트를 처리하는 이벤트 핸들러를 설정합니다. 'data' 이벤트는 사용자가 표준 입력에 데이터를 입력하고 엔터를 누를 때 발생
+//     const n = data.split(" ");
+//     //입력받은 데이터를 공백을 기준으로 분리하여 배열로 만듭니다. 예를 들어, 사용자가 "5 3"을 입력하면, n은 ["5", "3"]이 됨
+//     const a = Number(n[0]);
+//     const b = Number(n[1]);
+//
+//     let result = "";
+//
+//     for (let i = 0; i < b; i++) {
+//         for (let j = 0; j < a; j++) {
+//             result += '*';
+//         }
+//         result += '\n'
+//     }
+//     console.log(result);
+// });
+//
+//
+// function solution(n) {
+//     let pattern = "수박";
+//     let result = pattern.repeat(n);
+//     return result.slice(0, n);
+// }
+
+// function solution(left, right) {
+//     let answer = 0
+//
+//     for (let i = left; i <= right; i++) {
+//         let cnt = 0;  // 약수의 개수
+//         for (let j = 1; j <= i; j++) {
+//             if (i % j === 0) {
+//                 cnt++;
+//             }
+//         }
+//         if (cnt % 2 === 0) {
+//             answer += i;
+//         } else {
+//             answer -= i;
+//         }
+//     }
+//
+//     return answer;
+// }
+//
+// function solution(s, n) {
+//     let result = '';
+//
+//     for (let i = 0; i < s.length; i++) {
+//         if (s[i] === ' ') {
+//             result += ' ';
+//         } else {
+//             let ascii = s[i].charCodeAt(0);
+//             if (ascii >= 65 && ascii <= 90) {
+//                 result += String.fromCharCode((ascii - 65 + n) % 26 + 65);
+//             } else if (ascii >= 97 && ascii <= 122) {
+//                 result += String.fromCharCode((ascii - 97 + n) % 26 + 97);
+//             }
+//         }
+//     }
+//
+//     return result;
+// }
